@@ -13,7 +13,7 @@
   <artifactId>iot-gateway</artifactId>
 
   <properties>
-    <kafka.version>0.10.2.1</kafka.version>
+    <kafka.version>1.1.0</kafka.version>
     <debezium.version>0.7.5</debezium.version>
   </properties>
 
@@ -42,13 +42,13 @@
     <dependency>
       <groupId>com.github.akarnokd</groupId>
       <artifactId>rxjava2-extensions</artifactId>
-      <version>0.17.8</version>
+      <version>0.19.2</version>
     </dependency>
 
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-reactive-streams</artifactId>
-      <version>3.4.2</version>
+      <version>3.5.2</version>
     </dependency>
 
 
