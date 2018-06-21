@@ -14,12 +14,12 @@ import java.util.Random;
  */
 public class BalanceVerticle extends AbstractVerticle {
 
-    private Map<String, Double> balances = new HashMap<>();
-    private Random random = new Random();
+    private final Map<String, Double> balances = new HashMap<>();
+    private final Random random = new Random();
 
 
     @Override
-    public void start() throws Exception {
+    public void start() {
         Router router = Router.router(vertx);
         router.get("/balance/:account").handler(this::getBalance);
 

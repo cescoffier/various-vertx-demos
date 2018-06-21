@@ -13,11 +13,11 @@ import java.util.Map;
  */
 public class DebtVerticle extends AbstractVerticle {
 
-    private Map<String, Double> levels = new HashMap<>();
+    private final Map<String, Double> levels = new HashMap<>();
 
 
     @Override
-    public void start() throws Exception {
+    public void start() {
         Router router = Router.router(vertx);
         router.get("/debt/:account").handler(this::getDebt);
 

@@ -13,10 +13,10 @@ import java.util.UUID;
  */
 public class CustomerVerticle extends AbstractVerticle {
 
-    private Map<String, Customer> accounts = new HashMap<>();
+    private final Map<String, Customer> accounts = new HashMap<>();
 
     @Override
-    public void start() throws Exception {
+    public void start() {
         Router router = Router.router(vertx);
 
         router.get("/customers/:id").handler(this::getAccount);

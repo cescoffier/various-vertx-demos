@@ -15,7 +15,7 @@ import java.util.Collections;
 public class WebVerticle extends AbstractVerticle {
 
     @Override
-    public void start() throws Exception {
+    public void start() {
         Router router = Router.router(vertx);
         
         BridgeOptions options = new BridgeOptions();

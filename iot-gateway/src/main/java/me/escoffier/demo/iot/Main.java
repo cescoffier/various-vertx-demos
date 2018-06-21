@@ -3,14 +3,12 @@ package me.escoffier.demo.iot;
 import io.vertx.core.DeploymentOptions;
 import io.vertx.reactivex.core.Vertx;
 
-import java.io.IOException;
-
 /**
  * @author <a href="http://escoffier.me">Clement Escoffier</a>
  */
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Vertx vertx = Vertx.vertx();
 
         vertx.rxDeployVerticle(IOTGateway.class.getName())
@@ -23,7 +21,7 @@ public class Main {
             .flatMap(x ->
                 vertx.rxDeployVerticle(
                     Sensor.class.getName(),
-                    new DeploymentOptions().setInstances(5)))
+                    new DeploymentOptions().setInstances(1)))
             .subscribe();
     }
 }

@@ -1,4 +1,4 @@
-package io.openshift.booster;
+package io.vertx.example;
 
 import io.vertx.rxjava.core.Vertx;
 import io.vertx.rxjava.ext.jdbc.JDBCClient;

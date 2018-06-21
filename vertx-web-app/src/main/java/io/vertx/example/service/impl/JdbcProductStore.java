@@ -1,11 +1,11 @@
-package io.openshift.booster.service.impl;
+package io.vertx.example.service.impl;
 
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
+import io.vertx.example.service.Store;
 import io.vertx.ext.sql.ResultSet;
 import io.vertx.rxjava.ext.jdbc.JDBCClient;
 import io.vertx.rxjava.ext.sql.SQLRowStream;
-import io.openshift.booster.service.Store;
 import rx.Completable;
 import rx.Observable;
 import rx.Single;

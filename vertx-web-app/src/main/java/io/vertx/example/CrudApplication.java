@@ -1,7 +1,8 @@
-package io.openshift.booster;
+package io.vertx.example;
 
-import io.openshift.booster.service.Store;
-import io.openshift.booster.service.impl.JdbcProductStore;
+import io.vertx.core.Vertx;
+import io.vertx.example.service.Store;
+import io.vertx.example.service.impl.JdbcProductStore;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.rxjava.core.AbstractVerticle;
@@ -16,9 +17,14 @@ import rx.Single;
 
 import java.util.NoSuchElementException;
 
-import static io.openshift.booster.Errors.error;
+import static io.vertx.example.Errors.error;
 
 public class CrudApplication extends AbstractVerticle {
+
+  public static void main(String[] args) {
+    Vertx vertx = Vertx.vertx();
+    vertx.deployVerticle(CrudApplication.class.getName());
+  }
 
   private Store store;
 

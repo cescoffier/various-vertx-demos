@@ -20,7 +20,7 @@ import java.util.Map;
 public class IOTGateway extends AbstractVerticle {
 
     @Override
-    public void start(Future<Void> future) throws Exception {
+    public void start(Future<Void> future) {
         KafkaWriteStream<String, JsonObject> stream = KafkaWriteStream.create(vertx.getDelegate(), configuration());
 
         // TODO Create MQTT Server

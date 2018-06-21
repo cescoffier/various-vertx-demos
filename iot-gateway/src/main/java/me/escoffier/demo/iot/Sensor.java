@@ -21,10 +21,10 @@ public class Sensor extends AbstractVerticle {
 
     private final String id = UUID.randomUUID().toString();
 
-    private Random random = new Random();
+    private final Random random = new Random();
 
     @Override
-    public void start() throws Exception {
+    public void start() {
         MqttClient client = MqttClient.create(vertx);
 
         client.rxConnect(PORT, HOST)

@@ -18,7 +18,7 @@ import java.util.Map;
 public class DataProcessorVerticle extends AbstractVerticle {
 
     @Override
-    public void start() throws Exception {
+    public void start() {
         KafkaConsumer<String, JsonObject> consumer =
             KafkaConsumer.create(vertx, configuration(), String.class, JsonObject.class);
 

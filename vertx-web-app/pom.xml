@@ -13,7 +13,7 @@
   <artifactId>vertx-web-app</artifactId>
 
   <properties>
-    <vertx.verticle>io.openshift.booster.CrudApplication</vertx.verticle>
+    <vertx.verticle>io.vertx.example.CrudApplication</vertx.verticle>
   </properties>
 
   <dependencies>
