@@ -11,7 +11,7 @@
   <packaging>pom</packaging>
 
   <properties>
-    <vertx.version>3.5.4</vertx.version>
+    <vertx.version>3.6.0</vertx.version>
     <vmp.version>1.0.13</vmp.version>
 
     <maven.compiler.source>1.8</maven.compiler.source>
